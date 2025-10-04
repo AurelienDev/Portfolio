@@ -1,1 +1,5 @@
 theme: jekyll-theme-minimal
+# Optionnel : Indique à Jekyll de ne pas considérer ces dossiers
+# exclude:
+#   - "_site"
+#   - ".jekyll-cache" 
