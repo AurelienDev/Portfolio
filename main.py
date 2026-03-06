@@ -16,6 +16,9 @@ def get_live_data():
 @app.get("/data")
 def read_data(page: int = 1, limit: int = 10):
     df = get_live_data()
+
+    # On remplace tous les NaN par une chaîne vide ou 0 pour que le JSON soit valide
+    df = df.fillna("")
     
     # On calcule où commence et s'arrête la "page" demandée
     start = (page - 1) * limit
